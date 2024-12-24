@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff; /* Mengubah warna teks menjadi putih */
+            font-size: 2 em; /* Ukuran font lebih besar */
+            background-color: #337ab7; /* Latar belakang biru */
+            padding: 20px; /* Ruang di sekitar teks */
+            border-radius: 10px; /* Sudut melengkung */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #286090;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Transaksi Aman, Mudah, dan Cepat</h1>
+        <form id="transactionVoucherForm">
+            <label for="transactionId">Nama Transaksi:</label>
+            <input type="text" id="transactionId" name="transactionId" required>
+
+            <label for="transactionDate">Tanggal Transaksi:</label>
+            <input type="date" id="transactionDate" name="transactionDate" required>
+
+            <label for="amount">Jumlah:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="voucherCode">Kode Voucher (Opsional):</label>
+            <input type="text" id="voucherCode" name="voucherCode">
+
+            <button type="submit">Simpan</button>
+        </form>
+    </div>
+
+    <script>
+               document.getElementById('transactionVoucherForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Yeay transaksi anda berhasil!');
+        });
+    </script>
+</body>
+</html>
